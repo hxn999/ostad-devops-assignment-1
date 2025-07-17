@@ -1,18 +1,13 @@
 name: Log hello.txt file
-
 on:
-    push:
-        branches: [main]
-
+  push:
+    branches:
+      - main
 jobs:
-    log:
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
-            - name: log file
-              run: cat hello.txt
-
-
-
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: log file
+        run: cat hello.txt
